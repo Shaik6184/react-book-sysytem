@@ -1,0 +1,171 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f7fa;
+  color: #222;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  width: 100%;
+  min-height: calc(100vh - 64px); /* 64px for navbar */
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 2rem 5vw;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 1rem 2vw;
+  }
+}
+
+.home h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.home ul, .browse-books ul {
+  list-style: none;
+  padding: 0;
+}
+
+.home ul li, .browse-books ul li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.home ul li:hover, .browse-books ul li:hover {
+  background: #f0f4fa;
+}
+
+.home a, .browse-books a, .not-found a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.home a:hover, .browse-books a:hover, .not-found a:hover {
+  text-decoration: underline;
+}
+
+.browse-books h1 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.browse-books input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.book-details {
+  background: #f9f9fc;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.book-details h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.book-details h2 {
+  margin-top: 0.5rem;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.book-details p {
+  margin: 0.5rem 0;
+}
+
+.add-book {
+  background: #f9f9fc;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.add-book h1 {
+  margin-top: 0;
+  font-size: 1.7rem;
+}
+
+.add-book form > div {
+  margin-bottom: 1rem;
+}
+
+.add-book label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.add-book input, .add-book textarea, .add-book select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.add-book textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.add-book button[type="submit"] {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.add-book button[type="submit"]:hover {
+  background: #125ea2;
+}
+
+.not-found {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.not-found h1 {
+  font-size: 2.5rem;
+  color: #d32f2f;
+}
+
+.not-found p {
+  margin-bottom: 1.5rem;
+}
